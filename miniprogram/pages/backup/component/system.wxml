@@ -1,0 +1,8 @@
+<template name="system">
+<view class="index">
+  <view class="li" bindtap="clickFn" data-fn="detailCtrl">内容管理</view>
+  <view class="li" bindtap="clickFn" data-fn="fileCtrl">文件管理</view>
+  <view class="li" bindtap="clickFn" data-fn="managerCtrl">管理员管理</view>
+  <view class="li" bindtap="clickFn" data-fn="systemCtrl">系统设置</view>
+</view>
+</template>

@@ -1,0 +1,13 @@
+<template name="detail">
+<view class="detail">
+  <form bindsubmit="clickFn" data-fn="formSubmit">
+    <view class="line">
+      <view>标题</view>
+      <input name="title" placeholder="please input here"/>
+    </view>
+    <view class="line">
+    </view>
+ 
+  </form>
+</view>
+</template>
