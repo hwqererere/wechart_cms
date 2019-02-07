@@ -2,10 +2,20 @@
 <view class="detail">
   <form bindsubmit="clickFn" data-fn="formSubmit">
     <view class="line">
-      <view>标题</view>
-      <input name="title" placeholder="please input here"/>
+      <input name="title" placeholder="标题"/>
     </view>
     <view class="line">
+      <view class="key">标题图片</view>
+      <button>选择图片</button>
+      <image></image>
+      <button>删除</button>
+    </view>
+    <view class="line">
+      <label>仅管理员可见</label>
+      <label>所有人可见</label>
+    </view>
+    <view class="line">
+       <textarea></textarea>
     </view>
  
   </form>
