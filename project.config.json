@@ -34,7 +34,8 @@
 					"id": 0,
 					"name": "db guide",
 					"pathName": "pages/backup/index",
-					"query": "pageid=detail"
+					"query": "pageid=detaillist",
+					"scene": null
 				}
 			]
 		}

@@ -7,10 +7,15 @@
 .index .li:nth-child(4){background-color:#ff77ff}
 
 
-.detail{float:left;width:100%}
-.detail .line{float:left;width:96%;margin-left:2%}
+.detail{float:left;width:calc(100% - 20rpx);padding:20rpx 10rpx}
+.detail .line{float:left;width:96%;margin-left:2%;margin-top:20rpx;}
 .detail .line .key{float:left;width:100%}
 .detail .line input{border:2rpx solid #44B549;width:100%;height:60rpx;line-height:60rpx;}
+.detail .line image{width:100%;height:400rpx}
+.detail .line textarea{border:2rpx solid #44B549;border-radius:20rpx;text-align:center}
+.detail .operate{float:left;height:100rpx;width:100%}
+.detail .operatelay{position:fixed;bottom:-50rpx;left:0rpx;width:100%}
+.detail .operatelay button{float:left;margin:20rpx;height:80rpx;line-height:80rpx;}
 
 .file{float:left;width:100%;}
 .file .list{float:left;width:96%;margin-left:2%;height:200rpx;border-bottom:1rpx solid #909090}

@@ -1,11 +1,15 @@
 <view>
 <import src="component/index.wxml"/>
 <import src="component/detail.wxml"/>
+<import src="component/detaillist.wxml"/>
+
+
 <import src="component/file.wxml"/>
 <import src="component/system.wxml"/>
 
 <template class="index" wx:if="{{pageid=='index'}}" is="index" data="{{indexData}}" />
 <template class="index" wx:if="{{pageid=='detail'}}" is="detail" data="{{detailData}}" />
+<template class="index" wx:if="{{pageid=='detaillist'}}" is="detaillist" data="{{detaillistData}}" />
 <template class="index" wx:if="{{pageid=='file'}}" is="file" data="{{fileData}}" />
 
 <template class="index" wx:if="{{pageid=='system'}}" is="system" data="{{systemData}}" />

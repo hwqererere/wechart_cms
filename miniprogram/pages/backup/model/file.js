@@ -5,12 +5,13 @@ function showlist(self){
   db.selectAll("file", function (selres) {
     app.globalData.fileData = {}
     app.globalData.fileData.showlist = selres
-    self.setData({fileData:{list:selres,dellist:[]}})
+    self.setData({ fileData: { showlist:selres,dellist:[]}})
   })
 }
 
 const initfile = function(self,callback) {
-  self.setData({ fileData: { list: app.globalData.fileData.showlist, dellist: [] } })
+  showlist(self)
+ 
 }
 
 const addimg=function(self,callback){
@@ -87,9 +88,39 @@ const delchose=function(self,e){
     }
   })
 }
+
+const addvideo=function(e){
+  wx.chooseVideo({
+    sourceType: ['album', 'camera'],
+    maxDuration: 60,
+    camera: 'back',
+    success(res) {
+      let myDate = new Date();
+
+      let pathname = res.tempFilePath.split(".")
+      let filename = "v" + myDate.getTime() + "." + pathname[pathname.length - 1]
+      wx.cloud.uploadFile({
+        cloudPath: 'videos/' + filename, // 上传至云端的路径
+        filePath: res.tempFilePath, // 小程序临时文件路径
+        success: res => {
+            // 返回文件 ID
+            // console.log(res.fileID)
+          console.log("aaa")
+          db.add("file", { type: "video", pathid: res.fileID }, function () {
+            console.log("bbb")
+            showlist(self)
+          })
+        },
+        fail: console.error
+      })
+
+    }
+  })
+}
 module.exports = {
   initfile: initfile,
   addimg:addimg,
+  addvideo:addvideo,
   checkboxChange: checkboxChange,
   delchose:delchose
 }

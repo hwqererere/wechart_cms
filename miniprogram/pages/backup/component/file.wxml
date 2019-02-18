@@ -1,6 +1,6 @@
 <template name="file">
 <checkbox-group class="file" bindchange="clickFn" data-fn="checkboxChange">
-  <label class="list" wx:for="{{fileData.list}}" wx:key="key">
+  <label class="list" wx:for="{{fileData.showlist}}" wx:key="key">
     <checkbox value="{{item._id}}" />
     <view class="name">{{item._id}}</view>
     <image wx:if="{{item.type=='image'}}" src='{{item.pathid}}'></image>

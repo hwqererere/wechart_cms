@@ -1,0 +1,13 @@
+<template name="detaillist">
+
+  <view class="detaillist" wx:for="{{detaillistData}}" wx:key="key">
+    <button wx:if="{{item.showtype=='1'}}">开放</button>
+    <button wx:if="{{item.showtype=='0'}}">关闭</button>
+    <view class="tname">{{item.title}}</view>
+    <button >预览</button>
+    <view><image /></view>
+  </view>
+
+
+
+</template>

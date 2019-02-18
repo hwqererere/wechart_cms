@@ -1,5 +1,6 @@
 // pages/backup/index.js
-var router=require("router.js")
+const router=require("router.js")
+const app = getApp()
 Page({
 
   /**
@@ -7,6 +8,7 @@ Page({
    */
   data: {
     pageid:"index",
+    detailData:{},
     fileData:{}
   },
 
@@ -14,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    app.globalData.options=options
   },
 
 

@@ -2,6 +2,7 @@ const app = getApp()
 var lib = {}
 lib.index = require("model/index.js")
 lib.detail = require("model/detail.js")
+lib.detaillist = require("model/detaillist.js")
 lib.file = require("model/file.js")
 lib.manager = require("model/manager.js")
 lib.system = require("model/system.js")
