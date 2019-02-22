@@ -2,7 +2,7 @@
 <view class="detail">
   <form bindsubmit="clickFn" data-fn="formSubmit">
     <view class="line">
-      <input name="title" placeholder="标题" value='{{detailData.title}}'/>
+      <input name="title" placeholder="标题" bindinput="clickFn" data-fn="titleinput" value='{{detailData.title}}'/>
     </view>
     <view class="line">
       <button wx:if="{{!detailData.showimg}}" bindtap="clickFn" data-fn="selimg">标题图片</button>
@@ -10,14 +10,15 @@
       <button wx:if="{{detailData.showimg}}" bindtap="clickFn" data-fn="delselimg">删除</button>
     </view>
     <radio-group bindchange="clickFn" data-fn="checkboxChange" class="line">
-      <label><radio value="1" name="showtype"  checked="{{detailData.showtype=='1' || !detailData.showtype}}"/>仅管理员可见</label>
-      <label><radio value="0" name="showtype" checked="{{detailData.showtype=='0'}}"/>所有人可见</label>
+      <label><radio value="0" name="showtype"  checked="{{detailData.showtype=='0' || !detailData.showtype}}"/>仅管理员可见</label>
+      <label><radio value="1" name="showtype" checked="{{detailData.showtype=='1'}}"/>所有人可见</label>
     </radio-group>
 
     <view class="line">
        <view class="item" wx:for="{{detailData.word}}" wx:key="key">
         <textarea wx:if="{{item.type=='word'}}" name="t{{index}}">{{item.word}}</textarea>
         <image wx:if="{{item.type=='image' || item.type=='idimage'}}" src="{{item.url}}" mode="aspectFit"></image>
+         <video  wx:if="{{item.type=='video' || item.type=='idvideo'}}" src="{{item.url}}"></video>
         <button type="primary" bindtap="clickFn" data-fn="delline" data-ind="{{index}}">删除</button>
        </view>
     </view>
@@ -25,9 +26,10 @@
 
   <view class="operate">
     <view class="operatelay">
-      <button type="primary" bindtap="clickFn" data-fn="addword">插入文字</button>
+      <button type="primary" bindtap="clickFn" data-fn="addword">插入文字</button>      
       <button type="primary" bindtap="clickFn" data-fn="addpic">插入图片</button>
-      <button type="primary" form-type="submit"  >保存</button>
+      <button type="primary" bindtap="clickFn" data-fn="addvid">插入视频</button>
+      <button type="primary" form-type="submit">保存</button>
     </view>
   </view>
 

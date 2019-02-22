@@ -33,7 +33,7 @@
 				{
 					"id": 0,
 					"name": "db guide",
-					"pathName": "pages/backup/index",
+					"pathName": "pages/detail/index",
 					"query": "pageid=detaillist",
 					"scene": null
 				}

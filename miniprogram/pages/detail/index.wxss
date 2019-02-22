@@ -1,0 +1,4 @@
+.main{float:left;width:96%;margin-left:2%;}
+.main .li{float:left;height:200rpx;width:100%;border-bottom:2rpx solid #e0e0e0;padding:10rpx 0rpx;}
+.main .li .title{float:left;width:calc(100% - 210rpx);height:100rpx;line-height:100rpx;overflow:hidden}
+.main .li image{float:right;width:200rpx;height:200rpx;}

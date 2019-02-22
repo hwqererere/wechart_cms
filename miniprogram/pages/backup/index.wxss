@@ -14,8 +14,8 @@
 .detail .line image{width:100%;height:400rpx}
 .detail .line textarea{border:2rpx solid #44B549;border-radius:20rpx;text-align:center}
 .detail .operate{float:left;height:100rpx;width:100%}
-.detail .operatelay{position:fixed;bottom:-50rpx;left:0rpx;width:100%}
-.detail .operatelay button{float:left;margin:20rpx;height:80rpx;line-height:80rpx;}
+.detail .operatelay{position:fixed;bottom:-40rpx;left:0rpx;width:100%}
+.detail .operatelay button{float:left;margin:10rpx;height:60rpx;line-height:60rpx;font-size:30rpx;}
 
 .file{float:left;width:100%;}
 .file .list{float:left;width:96%;margin-left:2%;height:200rpx;border-bottom:1rpx solid #909090}
@@ -27,3 +27,9 @@
 .file .foot .fixedlay{position:fixed;bottom:0rpx;left:0rpx;width:100%;height:100rpx;border-top:1rpx solid #6e6e6e}
 .file .foot .fixedlay button{float:left;margin:10rpx 10rpx;}
 .file .foot .fixedlay button:first-child{margin-left:20rpx;}
+
+.detaillist{float:left;width:calc(100% - 20rpx);padding:20rpx 10rpx;margin-bottom:10rpx;border-bottom:2rpx solid #9e9e9e}
+.detaillist button{width:120rpx;height:80rpx;font-size:30rpx;padding:0rpx;line-height:80rpx;float:left;margin-left:10rpx;}
+.detaillist .tname{float:left;width:calc(100% - 400rpx);height:80rpx;overflow:hidden;text-overflow:ellipsis}
+.detaillist .img{float:left;height:200rpx;width:100%;float:left;}
+.detaillist .img image{height:200rpx;width:100%;}

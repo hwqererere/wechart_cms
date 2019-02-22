@@ -8,7 +8,6 @@ const selectAll=function(dbname,callback){
 
 const select=function(dbname,select,callback){
   dbconnect.collection(dbname).where(select).get({success(res){
-    console.log(res)
     callback.call(this,res)
   }})
 }

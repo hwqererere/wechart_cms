@@ -1,0 +1,6 @@
+<view class="main">
+  <view class="li" wx:for="{{list}}" wx:key="key" bindtap="link"  data-id="{{item._id}}">
+    <view class="title">{{item.title}}</view>
+    <image src='{{item.titleimg}}' mode="aspectFit"></image>
+  </view>
+</view>
