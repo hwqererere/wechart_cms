@@ -77,9 +77,18 @@ const close = function (self, e) {
     }
   }
 }
+
+const show=function(self,e){
+  let id = e.currentTarget.dataset.id ? e.currentTarget.dataset.id : e.target.dataset.id
+  console.log("aa")
+  wx.navigateTo({
+    url: '../detail/detail?id='+id,
+  })
+}
 module.exports = {
   initdetaillist: initdetaillist,
   del: del,
   open: open,
-  close:close
+  close:close,
+  show: show
 }

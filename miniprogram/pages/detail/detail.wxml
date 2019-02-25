@@ -1,2 +1,14 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="detail">
+  <view class="title">{{info.title}}</view>
+  <view class="info" wx:for="{{info.word}}" wx:key="key">
+
+    
+    <view class="line" wx:if="{{item.type=='idimage'}}">
+      <image mode="aspectFit" src="{{item.url}}"></image>
+    </view>
+    <view class="line" wx:elif="{{item.type=='idvideo'}}">
+      <video src="{{item.url}}"></video>
+    </view>
+    <view class="line" wx:else>{{item.word}}</view>
+  </view>
+</view>

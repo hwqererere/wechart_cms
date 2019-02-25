@@ -5,16 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    info:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let self=this
     let id = options.id
     db.select("article",{_id:id},function(res){
       console.log(res)
+      self.setData({info:res.data[0]})
+
     })
   },
 
